@@ -7,11 +7,7 @@ import { Liquid } from 'liquidjs';
 
 
 console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
-// Doe een fetch naar de data die je nodig hebt
-// const apiResponse = await fetch('...')
 
-// Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
-// const apiResponseJSON = await apiResponse.json()
 
 // Controleer eventueel de data in je console
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
@@ -20,25 +16,26 @@ console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
 
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
+app.use(express.static('public')) // Gebruik de map 'public' voor statische bestanden (resources zoals CSS, JavaScript, afbeeldingen en fonts), Bestanden in deze map kunnen dus door de browser gebruikt worden
 
-// Gebruik de map 'public' voor statische bestanden (resources zoals CSS, JavaScript, afbeeldingen en fonts)
-// Bestanden in deze map kunnen dus door de browser gebruikt worden
-app.use(express.static('public'))
 
-// Stel Liquid in als 'view engine'
 const engine = new Liquid();
-app.engine('liquid', engine.express()); 
+app.engine('liquid', engine.express());  // Stel Liquid in als 'view engine'
 
-// Stel de map met Liquid templates in
-// Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
+// Stel de map met Liquid templates in. Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
 
-// Maak een GET route voor de index (meestal doe je dit in de root, als /)
+
+// Fetch naar de nodige data in fabrique_art_objects
 app.get('/', async function (request, response) {
-   // Render index.liquid uit de Views map
-   // Geef hier eventueel data aan mee
-   response.render('index.liquid')
-})
+  const apiResponse = await fetch(
+    'https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  );
+  const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+  
+  response.render("index.liquid", { api: apiResponseJSON.data });
+});
+
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
