@@ -6,6 +6,9 @@ import express from 'express'
 import { Liquid } from 'liquidjs';
 
 
+console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
+
+
 // Controleer eventueel de data in je console
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
 // console.log(apiResponseJSON)
@@ -21,7 +24,6 @@ app.engine('liquid', engine.express());  // Stel Liquid in als 'view engine'
 
 // Stel de map met Liquid templates in. Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
-
 
 // Fetch naar de nodige data in fabrique_art_objects
 app.get('/', async function (request, response) {
