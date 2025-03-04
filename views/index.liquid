@@ -1,0 +1,17 @@
+{% render 'partials/head.liquid', title: 'Qatar Museums' %}
+
+{% render 'partials/header.liquid' %}
+
+
+<main>
+
+<ul class="art_images">
+    {% for imagesqatar in api %}
+        <li>
+            <a href=""></a>
+            <img src="https://fdnd-agency.directus.app/assets/{{ imagesqatar.images }}" alt="images of artwork in qatarmuseum">        
+        </li>
+    {% endfor %}
+</ul>
+
+</main>
