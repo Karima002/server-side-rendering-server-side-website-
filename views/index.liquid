@@ -9,9 +9,21 @@
     {% for imagesqatar in api %}
         <li>
             <a href=""></a>
-            <img src="https://fdnd-agency.directus.app/assets/{{ imagesqatar.image }}" alt="images of artwork in qatar ">        
+            <img src="https://fdnd-agency.directus.app/assets/{{ imagesqatar.image }}" alt="images of artwork in qatar " width="300px">        
         </li>
     {% endfor %}
 </ul>
+
+<search class="zoeken">
+    <form>
+        <label>
+            <input type="search" placeholder="SEARCH THE COLLECTION">
+        </label>
+
+        <p class="button-search">
+        <button type="submit" class="search--keyword-button">Zoek</button>
+        </p>
+    </form>
+</search>
 
 </main>
