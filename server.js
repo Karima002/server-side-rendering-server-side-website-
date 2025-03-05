@@ -27,15 +27,20 @@ app.set('views', './views')
 
 // Fetch naar de nodige data in fabrique_art_objects
 app.get('/', async function (request, response) {
-  const apiResponse = await fetch(
-    'https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
   );
   const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
   
   response.render("index.liquid", { api: apiResponseJSON.data });
 });
 
-
+app.get ('/object', async function (request, response) {
+  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  );
+  const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+  
+  response.render("objects.liquid", { api: apiResponseJSON.data });
+});
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
