@@ -3,12 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+ 
 
-body {
-    width: 100vh;
-}
-
-ul {
+.navigation {
     list-style: none;
     display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+.art_images {
+    column-count: 2; /* Aantal kolommen */
+    gap: 1.5em; /* Geen ruimte tussen de kolommen */
+        @media (min-width: 480px) {
+            column-count: 3;   
+        }
+        @media (min-width: 720px) {
+            column-count: 4;   
+        }
+}
+
+.art_images img {
+    display: block; /* Verwijdert inline-afstanden */
+    width: 100%; /* Zorg dat de afbeeldingen de kolom vullen */
+    height: auto; 
+    padding-top: 1.5em;
 }
