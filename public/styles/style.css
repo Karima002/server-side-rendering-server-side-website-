@@ -55,6 +55,7 @@ span {
     text-transform: uppercase;
     font-size: var(--font-size-s);
     color: var(--color-default);
+    font-weight: 550;
 }
 
 .menu-button {
