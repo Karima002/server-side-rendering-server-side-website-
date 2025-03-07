@@ -5,19 +5,27 @@
 }
 
 /* MARK: Header */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
 
 .menu-logo {
     padding-left: 2em;
     justify-content: flex-start;
 }
 
-.navigation {
+.nav-list {
     padding-right: 2em;
     list-style: none;
     display: flex;
     justify-content: flex-end;
     column-gap: 2em;
-    align-items: center;
+    align-items: self-end;
+
 }
 
 .translated-menu {
@@ -38,7 +46,10 @@ span {
     color: var(--color-default);
 }
 
-
+hr {
+    color: var(--color-default);
+    margin-top: 1em;
+}
 /* MARK: main */
 
 main {
