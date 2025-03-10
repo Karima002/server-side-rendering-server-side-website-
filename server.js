@@ -32,12 +32,12 @@ app.get('/', async function (request, response) {
 
 
 
-app.get ('/object/:id', async function (request, response) {
+app.get (['/object/:id', '/اشياء/:id'], async function (request, response) {
   const artworkId = request.params.id; 
   const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,image`
   );
   const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
-  console.log(apiResponseJSON)
+
   response.render("objects.liquid", { artwork: apiResponseJSON.data });
 });
 
