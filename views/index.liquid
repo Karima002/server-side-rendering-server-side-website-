@@ -6,10 +6,10 @@
 <main>
 
 <ul class="art_images">
-    {% for imagesqatar in api %}
+    {% for artwork in api %}
         <li>
-            <a href="/object/{{ imagesqatar.image }}">
-            <img src="https://fdnd-agency.directus.app/assets/{{ imagesqatar.image }}" alt="images of artwork in qatar " width="300px">        
+            <a href="/object/{{ artwork.id }}">
+                <img src="https://fdnd-agency.directus.app/assets/{{ artwork.image }}" alt="images of artwork in qatar " width="300px">        
             </a>
         </li>
     {% endfor %}

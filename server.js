@@ -30,12 +30,15 @@ app.get('/', async function (request, response) {
   response.render("index.liquid", { api: apiResponseJSON.data });
 });
 
-app.get ('/object/:image', async function (request, response) {
-  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects/?fields=image'
+
+
+app.get ('/object/:id', async function (request, response) {
+  const artworkId = request.params.id; 
+  const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,image`
   );
   const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
-  
-  response.render("objects.liquid", { api: apiResponseJSON.data });
+  console.log(apiResponseJSON)
+  response.render("objects.liquid", { artwork: apiResponseJSON.data });
 });
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
