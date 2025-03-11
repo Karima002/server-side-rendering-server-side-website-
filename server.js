@@ -4,7 +4,6 @@ import express from 'express'
 
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
-import render from 'liquidjs/dist/tags/render';
 
 // Controleer eventueel de data in je console
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
@@ -45,7 +44,7 @@ app.get (['/object/:id', '/اشياء/:id'], async function (request, response) 
 
 // Error Handling
 app.use((req, res) => {
-  return res.status(404), render("error404.liquid")
+  return res.status(404), render("error.liquid")
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen

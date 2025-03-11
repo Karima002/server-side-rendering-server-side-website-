@@ -1,0 +1,6 @@
+
+.artwork-object {
+    width: 600px; /* Breedte instellen */
+    height: auto;
+    object-fit: cover;
+}

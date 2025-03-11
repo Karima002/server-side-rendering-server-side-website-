@@ -1,16 +1,56 @@
-{% render 'partials/head.liquid', title: 'Qatar Museums: object detailpage' %}
+{% render 'partials/head.liquid', title: 'Qatar Museums', stylesheet: 'object.css' %}
 
 {% render 'partials/header.liquid' %}
 
 
 <main>
 
-{% if artwork.image %}
-    <h1>{{ artwork.title }}</h1>
-    <img src="https://fdnd-agency.directus.app/assets/{{ artwork.image }}" alt="images of artwork in qatar " width="300px">        
-{% else %}
-    <p>No image availible</p>
-{% endif %}
+<a class="back-home" href="/">Back</a>
+
+<section>
+    {% if artwork.image %}
+        <img class="artwork-object" src="https://fdnd-agency.directus.app/assets/{{ artwork.image }}" alt="images of artwork in qatar " width="300px">        
+        <h1>{{ artwork.title }}</h1>
+
+    {% else %}
+        <p>No image availible</p>
+    {% endif %}
+</section>
+
+<section>
+    <h1>Portraits Sketched from the Life Since the Year 1793</h1>
+    <p>Museum of Islamic Art</p>
+    <p>Bowl with monochrome luster decoration. The design shows an antelope confronting a long-tailed bird on a background of small chevrons. The kufic inscription on the body of the antelope says: “blessing to its owner.“ Above the antelope, the artist inscribed his name: “work of ‘Ali.“ In the middle of the glazed foot, the word Baraka (blessing) is rendered in kufic script. The initially abstract design style of the Abbasid luster wares developed in the 10th century and particularly in Iraq into a new decorative approach with animal designs. These are usually set on a stippled background. By this time, potters had abandoned polychrome painting in favor of monochrome luster. Here, a single animal or a symmetrical pair was at the center of the design. The change of style may reflect the taste of the new elite formed when the Buyids arrived in Iraq.</p>
+</section>
+
+<section>
+    <h2>You may also like</h2>
+    <ul>
+        <li>
+            <img src="/assets/image1.png">
+            <p>Temsa7</p>
+            <h3>Family Reunion</h3>
+        </li>
+
+        <li>
+            <img src="/assets/image2.png">
+            <p>Iran, 1700 – 1800 CE</p>
+            <h3>Wood and Lacquer Bow</h3>
+        </li>
+
+        <li>
+            <img src="/assets/image3.png">
+            <p>Olafur Eliasson</p>
+            <h3>Shadows Traveling on the Sea of the Day</h3>
+        </li>
+
+        <li>
+            <img src="/assets/image4.png">
+            <p>Unkown</p>
+            <h3>Bukhnaq (Head Cover)</h3>
+        </li>
+    </ul>
+</section>
 </main>
 
 
