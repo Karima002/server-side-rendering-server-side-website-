@@ -33,6 +33,7 @@ body {
     --font-size-xxl: 3rem; /* 48px ÷ 16 = 3rem */
     --font-size-xl: 2.375rem; /* 38px ÷ 16 = 2.375rem */
     --font-size-l: 2rem; /* 32px ÷ 16 = 2rem */
+    --font-size-xm: 1.5rem;
     --font-size-m: 1rem; /*16px, voor de header*/
     --font-size-s: .9rem;
     --font-size-xxs: 0.875rem; /* 14px ÷ 16 = 0.875rem */
@@ -48,6 +49,12 @@ body {
     --font-arabic: "Din Next it arabic", sans-serif;
     --font-default-bold: "Din Next it bold", sans-serif;
     --font-default-bold-arabic: "Din Next it bold arabic", sans-serif;
+
+    /* line height */
+    --line-height-text: 28px; /* line heigth voor de paragraaf op detailpagina*/
+
+    /* letter spacing */
+    --letter-spacing: -1.5%;
 }
 
 
