@@ -1,6 +1,38 @@
 
+.artwork {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-detailpage);
+    max-width: 100vw;
+    position: relative;
+}
+
+.back-home {
+    background-color: var(--color-detailpage);
+    max-width: fit-content;
+    padding: 16px 22px 12px 14px;
+    position: absolute;
+    top: 0%;
+    left: .5%;
+
+    a {
+        color: var(--color-accent);
+        font-family: var(--font-default);
+        text-transform: uppercase;
+        font-size: var(--font-size-s);
+    }
+}
+
 .artwork-object {
     width: 600px; /* Breedte instellen */
-    height: auto;
-    object-fit: cover;
+    height: 45vw;
+    object-fit: cover;   
+}
+
+h1 {
+    font-family: var(--font-default);
+    font-size: var(--font-size-xl);
+    font-weight: 100;
+    text-transform: uppercase;
 }

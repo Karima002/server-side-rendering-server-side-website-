@@ -41,6 +41,7 @@ body {
     --color-default: black;
     --color-accent: white;
     --color-accent-yellow: #F9FF1E;
+    --color-detailpage: #464646;
 
     /* fonts */
     --font-default: "Din Next it pro", sans-serif;
