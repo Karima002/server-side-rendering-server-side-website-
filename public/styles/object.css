@@ -21,6 +21,9 @@
         font-family: var(--font-default);
         text-transform: uppercase;
         font-size: var(--font-size-s);
+        &:hover {
+            text-decoration: underline;
+         }
     }
 }
 
@@ -42,6 +45,11 @@
     width: 600px; /* Breedte instellen */
     height: 45vw;
     object-fit: cover;   
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        transform: scale(.95);
+    }
 }
 
 .info-artwork {
@@ -93,12 +101,21 @@
     img {
         width: 100%;
         height: 80%;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        &:hover {
+        transform: scale(.95);
+    }
     }
     h3 {
         font-family: var(--font-default);
         font-size: var(--font-size-m);
         padding: .5em 1em 1em 1em;
-        
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+
+        }
     }
     p{
         font-family: var(--font-default);
@@ -106,6 +123,9 @@
         font-size: var(--font-size-xxs);
         letter-spacing: var(--letter-spacing);
         padding: .5em 1em .5em 1em;
-
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 }

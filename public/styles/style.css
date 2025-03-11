@@ -33,6 +33,9 @@
         display: flex;
         flex-direction: column;
     }
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .menu {
@@ -40,12 +43,16 @@
     @media (min-width: 680px) {
         display: block;
     }
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 span {
     font-family: var(--font-default-bold-arabic);
     font-weight: 550;
     cursor: pointer;
+    
 }
 
 .link-menu {
@@ -54,6 +61,7 @@ span {
     font-weight: 550;
     color: var(--color-default);
     text-transform: uppercase;
+    
 }
 
 .link-ticket {
@@ -66,6 +74,10 @@ span {
     font-size: var(--font-size-s);
     color: var(--color-default);
     font-weight: 550;
+    &:hover {
+        background-color: var(--color-default);
+        color: var(--color-accent);
+    }
 }
 
 .menu-button {
@@ -103,6 +115,10 @@ hr {
     height: auto; 
     padding-top: 1.5em;
     border-radius: .4em;
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 form {
