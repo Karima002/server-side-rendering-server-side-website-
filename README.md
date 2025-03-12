@@ -1,4 +1,3 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Qatar Museums - Fabrique
 Qatar Museums wil een online collectie-ervaring bieden aan bezoekers. De opdracht is om een homepage te ontwerpen en ontwikkelen met een canvas dat objecten uit een API toont. Daarnaast is ons ook de opdracht gegeven om een detailpagina en een filterpagina te maken.
@@ -19,7 +18,7 @@ https://github.com/Karima002/server-side-rendering-server-side-website-/blob/720
 ## Ontwerkeuzes
 
 ### Hover effect
-Zowel de afbeeldingen als de header hebben een hover effect. Dit is feedback voor de gebruiker dat er een actie kan volgen na het klikken. 
+Zowel de afbeeldingen als de header hebben een hover effect. Dit is een vorm van feedforward voor de gebruiker dat er een actie kan volgen na het klikken. 
 
 https://github.com/user-attachments/assets/480a0f9c-8456-46cb-90c4-c803fb402f40
 
@@ -30,9 +29,17 @@ https://github.com/user-attachments/assets/316d07eb-5d7a-4226-8d60-2c41cf11d110
 
 
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
-## Bronnen
+### Het inladen van de images uit de api
+
+De data van de images worden opgehaald met een fetch() vanuit de Api. De code gaat pas verder als de data is opgehaald (await).  Deze data wordt doorgegeven aan liquid met response.render. Api kan worden gezien als een variabel die de data (apiResponseJSON.data) doorgeeft liquid.
+
+
+https://github.com/Karima002/server-side-rendering-server-side-website-/blob/eaabfc43564f954784a576a6cfbe369cf529e6d8/server.js#L24-L32
+
+### Het renderen van de afbeelding in liquid
+In de for-loop in liquid `{% for artwork in api %}` wordt elk item in api waangeduid met artwork. API komt van de variable in de server.js: dit bevat de data van de API. `{{ artwork.id }}` vult de ID van het kunstwerk in. Als de ID van een kunstwerk 42 is, zal de URL /object/42 zijn. De basis-URL `https://fdnd-agency.directus.app/assets/` is van de API-server waar de afbeeldingen zijn opgeslagen.
+
 
 ## Licentie
 
