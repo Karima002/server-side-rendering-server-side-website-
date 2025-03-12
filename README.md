@@ -41,6 +41,8 @@ https://github.com/Karima002/server-side-rendering-server-side-website-/blob/eaa
 In de for-loop in liquid `{% for artwork in api %}` wordt elk item in api waangeduid met artwork. API komt van de variable in de server.js: dit bevat de data van de API. `{{ artwork.id }}` vult de ID van het kunstwerk in. Als de ID van een kunstwerk 42 is, zal de URL /object/42 zijn. De basis-URL `https://fdnd-agency.directus.app/assets/` is van de API-server waar de afbeeldingen zijn opgeslagen.
 
 
+https://github.com/Karima002/server-side-rendering-server-side-website-/blob/fbddb7fdc9d3586c1603fd546c4b311e46383894/views/index.liquid#L7-L17
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
