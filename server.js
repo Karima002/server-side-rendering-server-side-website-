@@ -38,8 +38,19 @@ app.get (['/object/:id', '/اشياء/:id'], async function (request, response) 
   );
   const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
 
-  response.render("objects.liquid", { artwork: apiResponseJSON.data });
+  response.render("objects.liquid", { artwork: apiResponseJSON.data }); // in liquid refereer je naar de variable waarin de data opgeslagen staat. 
 });
+
+
+// Route naar de filters experimenten
+app.get('/filters', async function (request, response) {
+  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  );
+  const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+
+  response.render("liquidfilters.liquid", { api: apiResponseJSON.data });
+});
+
 
 
 // Error Handling
