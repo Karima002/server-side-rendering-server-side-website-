@@ -11,11 +11,12 @@ Voor het responsive maken van de website heb ik verschillende breakpoints gebrui
 
 ![image](https://github.com/user-attachments/assets/2d96e049-a204-4674-aae0-4124f42e24a3)
 
+
+## Ontwerkeuzes
+
 ### Layout van images
 De images moeten elkaar aansluiten. Bij het gebruik van een grid en flex layout komen er rechte rijen te staat, terwijl de bedoeling van de canvas is dat de images elkaar aansluiten. Hierdoor heb ik ervoor gekozen om een [column count](https://developer.mozilla.org/en-US/docs/Web/CSS/column-count) te gebruiken. In code ziet het er als volgt uit:
 https://github.com/Karima002/server-side-rendering-server-side-website-/blob/72079bed77af45f1ff4d21b5f603673e4e02dfb4/public/styles/style.css#L101-L111
-
-## Ontwerkeuzes
 
 ### Hover effect
 Zowel de afbeeldingen als de header hebben een hover effect. Dit is een vorm van feedforward voor de gebruiker dat er een actie kan volgen na het klikken. 
