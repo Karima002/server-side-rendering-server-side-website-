@@ -2,7 +2,7 @@
 # Qatar Museums - Fabrique
 Qatar Museums wil een online collectie-ervaring bieden aan bezoekers. De opdracht is om een homepage te ontwerpen en ontwikkelen met een canvas dat objecten uit een API toont. Daarnaast is ons ook de opdracht gegeven om een detailpagina en een filterpagina te maken.
 
-
+Live link: https://server-side-rendering-server-side-website-m3f8.onrender.com/
 
 ## Beschrijving
 
@@ -12,7 +12,7 @@ Voor het responsive maken van de website heb ik verschillende breakpoints gebrui
 ![image](https://github.com/user-attachments/assets/2d96e049-a204-4674-aae0-4124f42e24a3)
 
 
-## Ontwerkeuzes
+## Ontwerpkeuzes
 
 ### Layout van images
 De images moeten elkaar aansluiten. Bij het gebruik van een grid en flex layout komen er rechte rijen te staat, terwijl de bedoeling van de canvas is dat de images elkaar aansluiten. Hierdoor heb ik ervoor gekozen om een [column count](https://developer.mozilla.org/en-US/docs/Web/CSS/column-count) te gebruiken. In code ziet het er als volgt uit:
